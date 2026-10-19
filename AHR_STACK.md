@@ -70,3 +70,10 @@ Here is how you connect these services with minimal manual effort:
 
 ### 4. Continuous Maintenance
 - Whenever you ask Antigravity to *"deploy changes"* or *"ship this"*, it triggers [`apply-migrations-and-push`](./skills/apply-migrations-and-push/SKILL.md), audits staged files for accidental secret leaks, runs build checks, and pushes directly to GitHub—which automatically goes live on Vercel.
+
+---
+
+## 🛠️ Step-by-Step Connection Manual
+For the complete browser-driven setup using Chrome DevTools MCP, GitHub CLI, and Supabase MCP, see the full guide:  
+👉 [**SETUP_AND_CONNECTIONS.md**](SETUP_AND_CONNECTIONS.md)
+

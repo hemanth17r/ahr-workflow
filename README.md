@@ -69,7 +69,7 @@ You never need to touch complex command lines or webhooks. The agent manages:
 - **95%**: Writing code, running automated tests, creating git commits, building SQL schemas, and deploying.
 - **5%**: You only click "Authorize" when an authentication screen opens in your browser.
 
-Read the full architecture breakdown in [**AHR_STACK.md**](AHR_STACK.md).
+Read the full architecture breakdown in [**AHR_STACK.md**](AHR_STACK.md) and the step-by-step browser connection guide in [**SETUP_AND_CONNECTIONS.md**](SETUP_AND_CONNECTIONS.md).
 
 ---
 
@@ -92,6 +92,7 @@ ahr-workflow/
 ├── scripts/
 │   ├── install.ps1             # 1-Click Windows installer
 │   └── install.sh              # 1-Click macOS/Linux installer
+├── SETUP_AND_CONNECTIONS.md    # Browser DevTools MCP + GitHub CLI + Supabase + Vercel Guide
 ├── SKILLS_DIRECTORY.md         # Exhaustive 30-skill catalog with triggers & outcomes
 ├── AHR_STACK.md                # Full production stack (React 19 + Supabase + Vercel)
 └── LICENSE                     # MIT License
