@@ -1,7 +1,7 @@
 # The AHR Autonomous Stack & Handoff Playbook
 
 > **Author**: Akkala Hemanth Reddy (`ahr`)  
-> **Contact**: `hemanth17r@gmail.com`  
+> **Contact**: `hemanth17r@gmail.com` | [YouTube (@hemanth17a)](https://www.youtube.com/@hemanth17a) | [X (@hemanth17rr)](https://x.com/hemanth17rr) | [Instagram (@hemanth17a)](https://www.instagram.com/hemanth17a/) | [GitHub (@hemanth17r)](https://github.com/hemanth17r)  
 > **Status**: Actively maintained & continuously updated as AI agent architectures evolve.
 
 ---

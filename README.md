@@ -5,18 +5,21 @@
 **The complete 30-skill autonomous operating system and global engineering rules used to build production software solo.**
 
 Created & maintained by **Akkala Hemanth Reddy (`ahr`)**  
-[![Email](https://img.shields.io/badge/Contact-hemanth17r%40gmail.com-blue?style=flat-square&logo=gmail)](mailto:hemanth17r@gmail.com)
+
+[![YouTube](https://img.shields.io/badge/YouTube-%40hemanth17a-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@hemanth17a)
+[![X (Twitter)](https://img.shields.io/badge/X-%40hemanth17rr-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/hemanth17rr)
+[![Instagram](https://img.shields.io/badge/Instagram-%40hemanth17a-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/hemanth17a/)
+[![GitHub](https://img.shields.io/badge/GitHub-%40hemanth17r-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hemanth17r)
+[![Email](https://img.shields.io/badge/Email-hemanth17r%40gmail.com-blue?style=flat-square&logo=gmail&logoColor=white)](mailto:hemanth17r@gmail.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
-[![Skills: 30](https://img.shields.io/badge/Skills-30%20Loaded-orange?style=flat-square)](SKILLS_DIRECTORY.md)
-[![Platform: Antigravity](https://img.shields.io/badge/Engine-Google%20Antigravity-purple?style=flat-square)](https://ai.google.dev)
 
 </div>
 
 ---
 
 ## 📺 Complete Walkthrough Video
-> **YouTube Video Guide**: *[Link coming soon - Subscribe for release updates]*  
-> A complete visual walkthrough covering installation, live debugging, and how Antigravity handles the 95% automated workflow while you only handle the 5% human sign-ins.
+> **YouTube Video Guide**: Subscribe on [**YouTube (@hemanth17a)**](https://www.youtube.com/@hemanth17a) for the complete video walkthrough.  
+> The video covers installation, live debugging, and how Antigravity handles the 95% automated workflow while you only handle the 5% human sign-ins.
 
 ---
 
@@ -96,14 +99,23 @@ Quick Highlights:
 
 ---
 
+## 🌐 Connect & Community
+
+Follow for upcoming workflow releases, agent breakdowns, and project drops:
+
+| Platform | Handle | Direct Link |
+| :--- | :--- | :--- |
+| **YouTube** | `@hemanth17a` | [youtube.com/@hemanth17a](https://www.youtube.com/@hemanth17a) |
+| **X (Twitter)** | `@hemanth17rr` | [x.com/hemanth17rr](https://x.com/hemanth17rr) |
+| **Instagram** | `@hemanth17a` | [instagram.com/hemanth17a](https://www.instagram.com/hemanth17a/) |
+| **GitHub** | `@hemanth17r` | [github.com/hemanth17r](https://github.com/hemanth17r) |
+| **Email** | `hemanth17r@gmail.com` | [hemanth17r@gmail.com](mailto:hemanth17r@gmail.com) |
+
+---
+
 ## 🔄 Updates & Maintenance
 
-This workflow is actively maintained by **Akkala Hemanth Reddy (`ahr`)** as new Antigravity features and frontier models emerge. 
-
-Have an improvement or a custom skill to contribute? PRs and Issues are welcome!
-
-- **Email**: `hemanth17r@gmail.com`
-- **GitHub**: [@hemanth17r](https://github.com/hemanth17r)
+This workflow is actively maintained by **Akkala Hemanth Reddy (`ahr`)** as new Antigravity features and frontier models emerge. Have an improvement or a custom skill to contribute? PRs and Issues are welcome!
 
 ---
 
