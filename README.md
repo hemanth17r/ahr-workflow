@@ -23,16 +23,28 @@ Created & maintained by **Akkala Hemanth Reddy (`ahr`)**
 
 ---
 
-## 🚀 30-Second Quickstart (1-Click Install)
+## 🚀 Quickstart: Install in Seconds
 
-No manual file copying required. Run one command in your terminal to install all 30 skills and the master rules:
+### Method 1: The Zero-Touch Agent Way (Recommended — 95% Agent Rule)
+You don't even need to open a terminal. Just paste this exact prompt directly into your Google Antigravity chat:
 
-### Windows (PowerShell)
+```text
+Install the AHR Autonomous Workflow from https://github.com/hemanth17r/ahr-workflow onto this machine.
+```
+> Your agent will automatically clone or fetch the installer, create a safety backup of your existing setup, install all 30 skills and the master rules, and report back when finished.
+
+---
+
+### Method 2: The 1-Line Terminal Way (Manual Fallback)
+
+If you prefer running it yourself in your terminal:
+
+#### Windows (PowerShell)
 ```powershell
 irm https://raw.githubusercontent.com/hemanth17r/ahr-workflow/main/scripts/install.ps1 | iex
 ```
 
-### macOS & Linux (Bash)
+#### macOS & Linux (Bash)
 ```bash
 curl -fsSL https://raw.githubusercontent.com/hemanth17r/ahr-workflow/main/scripts/install.sh | bash
 ```
@@ -41,7 +53,7 @@ curl -fsSL https://raw.githubusercontent.com/hemanth17r/ahr-workflow/main/script
 > 1. Safely backs up any existing skills or rules to `~/.gemini/backup_<timestamp>/`.
 > 2. Installs all 30 skills into `~/.gemini/config/skills/`.
 > 3. Installs the master `GEMINI.md` Global Engineering Standard into `~/.gemini/GEMINI.md`.
-> 4. You simply restart Antigravity, and all skills are active immediately.
+> 4. Restart Antigravity to activate.
 
 ---
 
