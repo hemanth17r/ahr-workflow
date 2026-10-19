@@ -53,13 +53,15 @@
 
 ### Step 2: GitHub Connection (1-Time Browser Auth)
 To let Antigravity create repositories and push commits autonomously without asking for credentials:
-1. Ensure GitHub CLI is installed (`winget install GitHub.cli` or `brew install gh`).
-2. Run:
-   ```bash
-   gh auth login
-   ```
-3. **What You Do (5%)**: Select `GitHub.com` $\rightarrow$ `HTTPS` $\rightarrow$ choose `Authenticate with a web browser`. A browser tab opens; click **"Authorize github"**.
-4. **What the Agent Does (95%)**: From this second forward, you never touch git again. When you say *"ship this project"*, Antigravity runs `git init`, creates the remote repo via `gh repo create`, stages files, and pushes code automatically.
+
+1. **Tell Antigravity**:
+   > *"Check if GitHub CLI is installed, and run `gh auth login` for me."*
+2. **What the Agent Does (95%)**:
+   - Checks/installs GitHub CLI (`winget` / `brew`).
+   - Runs `gh auth login` selecting `GitHub.com` $\rightarrow$ `HTTPS` $\rightarrow$ `Web browser auth`.
+3. **What You Do (5%)**:
+   - A browser tab opens automatically; click **"Authorize github"** to confirm your account.
+4. **Result**: From this moment on, you never touch git again. When you say *"ship this project"*, Antigravity runs `git init`, creates the remote repo via `gh repo create`, stages files, and pushes code automatically.
 
 ---
 

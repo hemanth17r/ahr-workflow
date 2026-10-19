@@ -52,24 +52,25 @@ This is the exact stack used to build and deploy high-performance applications l
 
 ---
 
-## ⚡ The Step-by-Step Handoff Playbook
+## ⚡ The Autonomous Handoff Playbook
 
-Here is how you connect these services with minimal manual effort:
+Here is how the 5% human / 95% agent division actually operates:
 
-### 1. Version Control: GitHub Connection
-- **Human Role (5%)**: Open [github.com/new](https://github.com/new), create an empty repository, and copy the repository URL. (Or sign into GitHub CLI once with `gh auth login`).
-- **Agent Role (95%)**: Run `git init`, set branch to `main`, stage all files, write semantic commits, link `git remote add origin <url>`, and push the codebase cleanly.
+### 1. Version Control: GitHub Connection (Zero Manual Repo Creation)
+- **Human Role (5%)**: Complete the one-time browser popup when `gh auth login` prompts for authorization.
+- **Agent Role (95%)**: Checks/installs GitHub CLI, runs `git init`, creates the remote GitHub repository autonomously (`gh repo create --public --source=. --push`), writes semantic commit messages, and pushes without asking for passwords.
 
-### 2. Live Hosting: Vercel Connection
-- **Human Role (5%)**: Go to [vercel.com](https://vercel.com), click **Add New Project**, and select your GitHub repository.
-- **Agent Role (95%)**: Configures `vite.config.js` and `package.json` build scripts (`npm run build`), ensures the output directory is `dist`, and verifies that zero build or lint errors exist. Every future git push triggers an automatic production deployment.
+### 2. Live Hosting: Vercel Connection (Zero Dashboard Clicking)
+- **Human Role (5%)**: Log into [vercel.com](https://vercel.com) in Chrome once.
+- **Agent Role (95%)**: Opens Vercel via **Chrome DevTools MCP**, clicks "Import", links your GitHub repository, configures the build command (`npm run build`) and output directory (`dist`), and deploys to production.
 
-### 3. Backend & Database: Supabase Connection
-- **Human Role (5%)**: Go to [supabase.com](https://supabase.com), create a new project, and copy the `Project URL` and `anon public key` into your `.env` file.
-- **Agent Role (95%)**: Writes all PostgreSQL table schemas, configures Row Level Security (RLS) policies, builds RPC procedures, adds PostGIS spatial indexes, and manages zero-downtime database migrations safely.
+### 3. Backend & Database: Supabase Connection (Zero Copy-Pasting Keys)
+- **Human Role (5%)**: Log into [supabase.com](https://supabase.com) in Chrome once and approve new project creation.
+- **Agent Role (95%)**: Navigates to Supabase API settings via **Chrome DevTools MCP**, extracts `Project URL` and `anon public key`, automatically writes `.env`, injects environment variables into Vercel, and executes database schemas and RLS policies via **Supabase MCP**.
 
-### 4. Continuous Maintenance
-- Whenever you ask Antigravity to *"deploy changes"* or *"ship this"*, it triggers [`apply-migrations-and-push`](./skills/apply-migrations-and-push/SKILL.md), audits staged files for accidental secret leaks, runs build checks, and pushes directly to GitHub—which automatically goes live on Vercel.
+### 4. Continuous Autonomous Deployments
+- You simply tell Antigravity: *"Deploy my updates and ship to live."*
+- The agent activates [`apply-migrations-and-push`](./skills/apply-migrations-and-push/SKILL.md), audits staged files to prevent secret leaks, executes database migrations, verifies type safety, and pushes to GitHub—which automatically goes live on Vercel in under 60 seconds.
 
 ---
 
