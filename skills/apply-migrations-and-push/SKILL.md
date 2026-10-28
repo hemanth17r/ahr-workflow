@@ -1,7 +1,7 @@
 ---
 name: apply-migrations-and-push
 description: >-
-  Executes unapplied database migrations, verifies project build safety, and pushes code to GitHub cleanly. Use when you say "apply migrations and push", "push to github", "run migrations", "deploy changes", "commit and push", "ship this", "let's push", or "push this".
+  Executes unapplied database migrations, verifies project build safety, and pushes code to GitHub cleanly. Trigger on any deploy or push intent: "push", "push it", "push now", "push changes", "push to github", "sync to github", "deploy code", "ship updates", "apply migrations and push", "run migrations", "deploy changes", "commit and push", "ship this", or "let's push".
 ---
 
 # Apply Database Migrations & Push to GitHub

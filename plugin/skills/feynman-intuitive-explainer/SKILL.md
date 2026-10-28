@@ -1,7 +1,7 @@
 ---
 name: feynman-intuitive-explainer
 description: >-
-  Translates complex technical jargon, engineering architecture, and mathematical concepts into crystal-clear, intuitive real-world analogies (The Feynman Technique / ELI5). Strips away intimidating academic vocabulary and senior-researcher jargon, anchoring concepts in vivid, everyday physical mental models. Trigger when asked to "explain simply", "ELI5", "use analogies", "feynman technique", "simple terms", "break it down simply", "in plain english", "real-world analogy", or "make it intuitive".
+  Translates complex technical jargon, engineering architecture, and mathematical concepts into crystal-clear, intuitive real-world analogies (The Feynman Technique / ELI5). Strips away intimidating academic vocabulary and senior-researcher jargon, anchoring concepts in vivid, everyday physical mental models. Trigger when the user expresses confusion or asks for simplification: "I don't understand", "I don't get it", "what does this mean", "explain simply", "break this down", "in simple words", "simplify this", "ELI5", "use analogies", "feynman technique", "simple terms", "in plain english", "real-world analogy", or "make it intuitive".
 ---
 
 # Feynman Intuitive Explainer (The Real-World Analogy Standard)

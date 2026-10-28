@@ -1,7 +1,7 @@
 ---
 name: brainstorm-and-qa
 description: >-
-  Direct Q&A and brainstorming mode. Provides clear, conversational answers without editing codebase files or generating formal implementation plans. Use when you say "brainstorm", "just answer", "q&a mode", "answer question", "no code changes", "just talk", or "no edits".
+  Direct Q&A and brainstorming mode. Provides clear, conversational answers without editing codebase files or generating formal implementation plans. Trigger on informal Q&A or exploration: "brainstorm", "just answer", "quick question", "just a question", "just thinking", "no code", "no code changes", "q&a mode", "answer question", "just talk", "talk to me", or "no edits".
 ---
 
 # Brainstorm & Q&A Mode

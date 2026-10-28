@@ -1,7 +1,7 @@
 ---
 name: browser-devtools-audit
 description: >-
-  Uses Chrome DevTools and browser inspection tools to carefully test, audit, and verify web interfaces. Halts and asks for clarification if requirements are ambiguous or before executing important/destructive actions. Use when you say "use browser agent", "use browser devtools", "inspect in browser", or "test in browser carefully".
+  Uses Chrome DevTools and browser inspection tools to carefully test, audit, and verify web interfaces. Halts and asks for clarification if requirements are ambiguous or before executing important/destructive actions. Trigger on browser testing: "check in browser", "inspect in browser", "test in browser", "open browser and test", "browser check", "use browser agent", "use browser devtools", or "test in browser carefully".
 ---
 
 # Browser DevTools Audit & Verification

@@ -22,22 +22,22 @@ A platform-agnostic, evidence-based founder outreach skill designed to maximize 
 4. **Cognitive Load & Word Budget**:
    - Hard budget: **Under 55 words total** (fits on a mobile phone screen without scrolling).
    - **Zero Shopping Lists**: Never pad with lists of synonyms (*"API integration, dashboard ticket, or data pipeline"*). Pick ONE concrete problem.
-5. **Contractor & Remote Reality**:
-   - Explicitly mention timezone/contract terms only when relevant (e.g. billing as an independent contractor under W-8BEN via Deel/Wise/Stripe).
-   - "US Remote Only" listings on seed startups frequently accept overseas contractors when proven builders reach out directly with proof.
+5. **Location & Contractor Reality**:
+   - Primary Location: **India** (billing as an independent contractor under W-8BEN via Deel/Wise).
+   - "US Remote Only" listings on seed startups frequently accept overseas contractors when proven builders reach out directly.
 
 ---
 
-## 🧩 Portfolio Matching Matrix Template
+## 🧩 Portfolio Matching Matrix
 
 Match the company's domain to **ONE** specific project proof link. Never mix projects into the same sentence:
 
 | Role / Domain Type | Primary Proof URL | Grounded Anchor Narrative |
 | :--- | :--- | :--- |
-| **Full Stack / Web App / 0-to-1** | `[your-app.com]` | *"worked directly with the founder taking their platform from 0 to 1 into production"* |
-| **Forward Deployed / User Discovery** | `[your-product.com]` | *"took [Project] from idea to production talking directly with users and mapping workflows"* |
-| **AI Agents / Dev Tools / Systems** | `[your-agent-app.com]` | *"architected [Project], an AI-native execution engine with automated tooling"* |
-| **Data Systems / Open Source** | `[your-tool.com]` | *"built and deployed [Tool] end to end from idea to production"* |
+| **Full Stack / Web App / 0-to-1** | `app.spurkle.in` | *"worked directly with the Spurkle founder taking their platform from 0 to 1 into production"* |
+| **Forward Deployed / User Discovery** | `helphive.me` | *"took Helphive from idea to production talking directly with users and mapping workflows"* |
+| **AI Agents / MCP / Dev Tools / Systems** | `mlue-ai.vercel.app` | *"architected MLUE, an AI-native execution substrate with a native 12-tool MCP server"* |
+| **Civic Tech / Data Systems** | `civiclens.tech` | *"built and deployed civiclens.tech end to end from idea to production"* |
 
 ---
 
@@ -55,16 +55,16 @@ flowchart TD
 
 ## 📜 High-Signal Templates (< 55 Words)
 
-### Path B1: Domain / Systems / AI Infrastructure Hook
+### Path B1: Domain / Systems / MCP Hook
 *Use when the role involves AI agent tooling, MCP servers, or systems architecture:*
 
 ```text
 hi [Founder Name],
 
-your thesis on [exact technical problem, e.g. persistent execution for agents] hits home. obsessed over this from first principles—experimenting to see if i could build an AI-native substrate without legacy crutches.
+your thesis on [exact technical problem, e.g. persistent computers for agents] hits home. obsessed over this from first principles—experimenting to see if i could build an AI-native substrate without legacy crutches.
 
-architected [Project Name] with a native tool suite and execution engine:
-https://[your-agent-app.com]
+architected MLUE with a native 12-tool MCP server and telemetry suite:
+mlue-ai.vercel.app
 
 i love tinkering at the systems level with high ownership. open to a quick chat?
 ```
@@ -77,10 +77,10 @@ i love tinkering at the systems level with high ownership. open to a quick chat?
 ```text
 hi [Founder Name],
 
-having shipped products from 0 to 1 talking directly to users and founders, i know firsthand that building software is the easy part—distribution and clean execution is where products live or die.
+having shipped 3 products from 0 to 1 talking directly to users and founders, i know firsthand that building software is the easy part—distribution and clean execution is where products live or die.
 
-took [Project Name] from 0 to 1 directly with high ownership:
-https://[your-app.com]
+took Spurkle from 0 to 1 directly with the founder with high ownership:
+app.spurkle.in
 
 throw me a pending feature from your backlog and i'll build and ship it.
 ```
@@ -95,8 +95,8 @@ hi [Founder Name],
 
 saw you need someone to bridge customer discovery and shipping enterprise agent integrations.
 
-i operate right at that boundary—talking to users, mapping messy workflows, and writing production integrations with high ownership. took [Project Name] from idea to production doing this directly:
-https://[your-product.com]
+i operate right at that boundary—talking to users, mapping messy workflows, and writing production integrations with high ownership. took Helphive from idea to production doing this directly:
+helphive.me
 
 throw me a customer integration from your backlog and i'll build and ship it.
 ```
@@ -121,6 +121,6 @@ Before finalizing any message, verify all 6 rules:
 - [ ] **Greeting**: Starts with `hi [Name],` (lowercase `hi`, addresses recipient directly).
 - [ ] **No Landing Page Summary**: Does NOT tell the founder what their company does.
 - [ ] **Word Count**: Strictly **under 55 words**.
-- [ ] **Single Proof Link**: Exactly 1 raw clickable URL on its own line (`https://your-domain.com`).
-- [ ] **No Attached Parentheses**: Never write `production(https://your-domain.com)`. Keep the URL clean.
+- [ ] **Single Proof Link**: Exactly 1 raw clickable URL on its own line (`app.spurkle.in` or `mlue-ai.vercel.app`).
+- [ ] **No Attached Parentheses**: Never write `production(app.spurkle.in)`. Keep the URL clean.
 - [ ] **No Shopping Lists**: Replaced generic lists with one concrete engineering noun.

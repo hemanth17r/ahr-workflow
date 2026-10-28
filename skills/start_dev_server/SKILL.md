@@ -1,7 +1,7 @@
 ---
-name: start-dev-server
+name: start_dev_server
 description: >-
-  Automatically handles starting the local development server (npm run dev) and ensures the environment is clean by terminating any stale processes blocking the required port (e.g., 5173). Trigger when opening a project for the first time, on a fresh restart, or when asked to "start the server", "run the app", "start dev server", "npm run dev", "run dev", "preview this", "open in browser", or "spin up local server".
+  Automatically starts the local development server (npm run dev) and cleans up stale port conflicts. Trigger on any dev server intent: "npm run dev", "run dev", "start dev", "start server", "start the server", "run the app", "restart dev", "restart server", "preview app", "open in browser", "preview this", "start dev server", or "spin up local server".
 ---
 
 # Start Dev Server

@@ -56,7 +56,7 @@ if [ -f "$RULES_FILE" ]; then
 fi
 
 # 4. Copy Skills
-echo "[*] Installing 30 production skills to: $SKILLS_DIR"
+echo "[*] Installing 32 production skills to: $SKILLS_DIR"
 cp -r "$SOURCE_SKILLS"/* "$SKILLS_DIR/"
 
 # 5. Copy Rules
@@ -78,5 +78,5 @@ echo "   SUCCESS: $INSTALLED_COUNT Skills & Global Rules Installed!           "
 echo "=========================================================="
 echo ""
 echo "Next Step: Restart Google Antigravity or open a new session."
-echo "Your agent now operates with AHR's 30 production skills & rules."
+echo "Your agent now operates with AHR's 32 production skills & rules."
 echo ""

@@ -76,7 +76,7 @@ if (Test-Path $rulesFile) {
 }
 
 # 4. Copy Skills
-Write-Host "[*] Installing 30 production skills to: $skillsDir" -ForegroundColor Cyan
+Write-Host "[*] Installing 32 production skills to: $skillsDir" -ForegroundColor Cyan
 $skillFolders = Get-ChildItem -Path $sourceSkills -Directory
 foreach ($folder in $skillFolders) {
     $dest = Join-Path $skillsDir $folder.Name
@@ -102,5 +102,5 @@ Write-Host "   SUCCESS: $installedCount Skills & Global Rules Installed!        
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Next Step: Restart Google Antigravity or open a new session." -ForegroundColor White
-Write-Host "Your agent now operates with AHR's 30 production skills & rules." -ForegroundColor White
+Write-Host "Your agent now operates with AHR's 32 production skills & rules." -ForegroundColor White
 Write-Host ""

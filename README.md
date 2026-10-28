@@ -2,7 +2,7 @@
 
 # ⚡ AHR Autonomous Workflow for Google Antigravity
 
-**The complete 30-skill autonomous operating system and global engineering rules used to build production software solo.**
+**The complete 32-skill autonomous operating system and global engineering rules used to build production software solo.**
 
 Created & maintained by **Akkala Hemanth Reddy (`ahr`)**  
 
@@ -31,7 +31,7 @@ You don't even need to open a terminal. Just paste this exact prompt directly in
 ```text
 Install the AHR Autonomous Workflow from https://github.com/hemanth17r/ahr-workflow onto this machine.
 ```
-> Your agent will automatically clone or fetch the installer, create a safety backup of your existing setup, install all 30 skills and the master rules, and report back when finished.
+> Your agent will automatically clone or fetch the installer, create a safety backup of your existing setup, install all 32 skills and the master rules, and report back when finished.
 
 ---
 
@@ -51,7 +51,7 @@ curl -fsSL https://raw.githubusercontent.com/hemanth17r/ahr-workflow/main/script
 
 > **What the installer does**:
 > 1. Safely backs up any existing skills or rules to `~/.gemini/backup_<timestamp>/`.
-> 2. Installs all 30 skills into `~/.gemini/config/skills/`.
+> 2. Installs all 32 skills into `~/.gemini/config/skills/`.
 > 3. Installs the master `GEMINI.md` Global Engineering Standard into `~/.gemini/GEMINI.md`.
 > 4. Restart Antigravity to activate.
 
@@ -62,7 +62,7 @@ curl -fsSL https://raw.githubusercontent.com/hemanth17r/ahr-workflow/main/script
 Most developer prompt collections overwhelm the AI model by dumping thousands of tokens into the context window on every prompt. This workflow is built on two core architectural pillars:
 
 ### 1. Progressive Disclosure (Zero Context Waste)
-Antigravity loads **only** the title and brief description of each skill into memory. The full skill body is loaded dynamically **only when your prompt triggers that specific intent**. You get 30 enterprise-grade capabilities with zero prompt bloat.
+Antigravity loads **only** the title and brief description of each skill into memory. The full skill body is loaded dynamically **only when your prompt triggers that specific intent**. You get 32 enterprise-grade capabilities with zero prompt bloat.
 
 ### 2. The 5% Human vs. 95% Agent Rule
 You never need to touch complex command lines or webhooks. The agent manages:
@@ -79,12 +79,12 @@ Read the full architecture breakdown in [**AHR_STACK.md**](AHR_STACK.md) and the
 ahr-workflow/
 ├── rules/
 │   └── GEMINI.md               # Master Global Engineering & Operating Standard
-├── skills/                     # 30 Modular Production Skills
+├── skills/                     # 32 Modular Production Skills
 │   ├── root-cause-triage/      # Zero speculative edits until reproduction tests fail
 │   ├── big-tech-ui-craft/      # Apple/Linear visual alignment, typography & spacing
 │   ├── big-tech-db-craft/      # 4-phase zero-downtime Expand/Contract schema migrations
 │   ├── shift-left-verification/# Google Small Tests (<100ms) with zero mocking illusions
-│   └── ... (all 30 skills)
+│   └── ... (all 32 skills)
 ├── plugin/                     # Turnkey Antigravity Plugin Package
 │   ├── plugin.json             # Manifest file
 │   ├── rules/AGENTS.md         # Bundled rules
@@ -93,7 +93,7 @@ ahr-workflow/
 │   ├── install.ps1             # 1-Click Windows installer
 │   └── install.sh              # 1-Click macOS/Linux installer
 ├── SETUP_AND_CONNECTIONS.md    # Browser DevTools MCP + GitHub CLI + Supabase + Vercel Guide
-├── SKILLS_DIRECTORY.md         # Exhaustive 30-skill catalog with triggers & outcomes
+├── SKILLS_DIRECTORY.md         # Exhaustive 32-skill catalog with triggers & outcomes
 ├── AHR_STACK.md                # Full production stack (React 19 + Supabase + Vercel)
 └── LICENSE                     # MIT License
 ```

@@ -17,9 +17,9 @@
 - **Musk 10/10 Protocol (Non-Code Q&A & Clarifications)**:
   - **Binary Subtractive Filter**: Every sentence must strictly either (1) directly answer the core question, or (2) prevent catastrophic failure/data loss. Delete everything else.
   - **Zero Structural Scaffolding**: Forbid formatting templates (`Verdict`, `Signal`, `Opt-in`), bullet quotas, or polite sign-offs on simple answers. State the raw answer and critical constraint in 1–3 sentences, then terminate immediately.
-- **Human-First Bug & Audit Protocol (Physical Screen Perspective)**:
-  - When explaining, triaging, or discussing bugs, audits, or app defects: strictly define the **Problem** and **Solution** from the **physical end-user perspective** (what they tap, what happens on their screen, why it frustrates them, and how their immediate workflow is restored).
-  - Forbid internal plumbing jargon (e.g., PostgREST error codes, SQL column names, React hook states, SWR array mechanics) in conversational answers unless explicitly asked for technical code implementation details.
+- **Human-First Product & Screen Perspective Protocol (Universal Default)**:
+  - When discussing, planning, or triaging **any feature, workflow, bug, or audit**: strictly lead with the **physical end-user/operator screen journey** (what each persona taps, what appears on their physical screen, and how their real-world workflow proceeds).
+  - Forbid internal plumbing jargon (e.g., table schemas, SQL columns, RLS policies, React hooks, API endpoints) in conceptual and conversational answers unless explicitly requested for technical code implementation details.
 
 ## 3. Co-Founder Pushback & Anti-Distraction Mandate (ALWAYS ACTIVE)
 - **Strict Sequence Litmus Test**:
@@ -33,18 +33,24 @@
 
 ## 4. Mandatory Domain Skill Dispatch Router
 Before writing code or executing tasks in any of the following domains, you MUST view and follow the dedicated skill:
-- **UI, Styling & Visual Polish**: `big-tech-ui-craft` & `fluid-tactile-motion` (optical centering, 3-tier palette, 375px mobile budgeting, spring physics).
+- **UI, Styling & Visual Polish**: `big-tech-ui-craft`, `fluid-tactile-motion`, & `phonepe-visual-ui-craft` (optical centering, spring physics, zero-literacy visual action tiles).
 - **Product UX, Information Flow & Microcopy**: `big-tech-product-ux` & `interpretive-ui-craft` (visual anchoring, zero-redundancy copy, anti-meta prose, decluttering).
 - **Database, Schemas, Migrations & Concurrency**: `big-tech-db-craft` & `big-tech-db-resilience` (expand/contract, lock safety, keyset pagination, atomic guards).
+- **Deployments, Migrations & Git Sync**: `apply-migrations-and-push` (zero-downtime deploy & push pipeline) & `hold-git-push` (local-only commits guard).
+- **Knowledge, Finding & IP Curation**: `curate-software-findings` (extract and archive permanent insights into Software Findings library).
 - **Tooling Shortcuts, Prior-Art & Architecture Audits**: `idea-reality-check` (open-source watchdog, pre-flight package/tool check before custom code, competitor teardowns).
 - **Startup & Business Viability Evaluation**: `probabilistic-idea-evaluator` (human friction, unit economics, bull/bear cases, 14-day low-code acid test).
-- **Architecture & Metaphor Deconstruction**: `principle-over-literalism` & `ruthless-intellectual-honesty`.
-- **Testing, Verification & Audits**: `strict-ground-truth-audit` & `shift-left-verification` (deterministic small tests, zero mocking illusions).
+- **Architecture, Deconstruction & Scratch Builds**: `ground-up-engineering-protocol` ("Movement First, Casing Second" dependency ordering), `principle-over-literalism`, & `ruthless-intellectual-honesty`.
+- **Testing, Verification & Audits**: `strict-ground-truth-audit` (end-to-end logic/code integrity), `shift-left-verification` (deterministic small unit tests), `blackbox-logic-flow-audit` (fast in-memory routing/column simulation), & `browser-devtools-audit` (live browser DOM/console inspection).
+- **User Flows, Transaction Pipelines & Multi-Actor E2E**: `headless-userflow-slice-test` (threshold-gated headless live DB persistence & RLS slice verification).
 - **Bug Triage & Incident Debugging**: `root-cause-triage` (isolate reproduction test first, zero speculative editing, regression guards).
 - **Releases, SemVer & Git Tagging**: `semver-release-craft` (SSOT version registers, automated SemVer classification, annotated git tags, changelog sync).
-- **Performance & Latency Optimization**: `production-performance-and-efficiency`.
-- **Setups & Work Division**: `autonomous-division-of-labor` (max agent ownership, zero-touch user delegation, surgical step-by-step dispatch).
+- **Performance, Latency & Signal Optimization**: `production-performance-and-efficiency` (payload/DB latency minimization) & `ten-out-of-ten-signal-audit` (binary subtractive filter, zero fluff).
+- **Setups, Work Division & Dev Server**: `autonomous-division-of-labor` (max agent ownership, zero-touch human handoff) & `start_dev_server` (stale port clearance and clean background spin-up).
+- **Execution Guardrails & Modes**: `plan-only-mode` (strict read-only advisory, zero file edits) & `brainstorm-and-qa` (conversational exploration without plan artifacts).
+- **Intuitive Explanations & Analogies**: `feynman-intuitive-explainer` (ELI5, real-world physical metaphors upon user confusion).
 - **Incentives, Game Theory, Bad/Good Actor Systems & Rules**: `adversarial-mechanism-design` (reverse game theory, 4 bad-actor personas, Goodhart's law audits, mutual goodwill, two-way dignity).
+- **Founder Outreach & Direct Email**: `grounded-founder-outreach` (grounded, proof-anchored pitches) & `send-outreach-email` (verified SMTP dispatch).
 
 ## 5. Production Architecture & Data Safety
 - Protect user data by default. Never expose secrets, credentials, tokens, or sensitive information.

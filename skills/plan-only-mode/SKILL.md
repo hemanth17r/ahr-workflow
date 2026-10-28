@@ -1,7 +1,7 @@
 ---
 name: plan-only-mode
 description: >-
-  Strict read-only advisory mode. Prevents codebase edits without prior user approval. Use when you say "plan only", "don't edit files yet", "wait for approval", or "ask before editing".
+  Strict read-only advisory mode. Prevents codebase edits without prior user approval. Trigger when asked to plan or restrict edits: "plan only", "just plan", "plan first", "only plan", "don't code yet", "don't edit files yet", "no code edits yet", "read only", "review first", "wait for approval", or "ask before editing".
 ---
 
 # Plan-Only Mode
