@@ -1,0 +1,63 @@
+name: Universal CI
+
+on:
+  push:
+    branches: [ "main", "master" ]
+  pull_request:
+    branches: [ "main", "master" ]
+
+jobs:
+  verify:
+    name: Build & Type Verification
+    runs-on: ubuntu-latest
+    env:
+      NEXT_PUBLIC_SUPABASE_URL: ${{ secrets.NEXT_PUBLIC_SUPABASE_URL || 'https://placeholder.supabase.co' }}
+      NEXT_PUBLIC_SUPABASE_ANON_KEY: ${{ secrets.NEXT_PUBLIC_SUPABASE_ANON_KEY || 'placeholder' }}
+      VITE_SUPABASE_URL: ${{ secrets.VITE_SUPABASE_URL || 'https://placeholder.supabase.co' }}
+      VITE_SUPABASE_ANON_KEY: ${{ secrets.VITE_SUPABASE_ANON_KEY || 'placeholder' }}
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      # 1. Node / TypeScript Ecosystem
+      - name: Detect Node.js Project
+        id: check_node
+        run: |
+          if [ -f "package.json" ]; then
+            echo "is_node=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Setup Node.js
+        if: steps.check_node.outputs.is_node == 'true'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22.x'
+          cache: 'npm'
+
+      - name: Install Dependencies
+        if: steps.check_node.outputs.is_node == 'true'
+        run: |
+          if [ -f "package-lock.json" ]; then
+            npm ci
+          else
+            npm install
+          fi
+
+      - name: Compile & Typecheck
+        if: steps.check_node.outputs.is_node == 'true'
+        run: |
+          if grep -q '"build":' package.json; then
+            npm run build
+          fi
+
+      # 2. Rust Ecosystem
+      - name: Detect Rust Project
+        id: check_rust
+        run: |
+          if [ -f "Cargo.toml" ]; then
+            echo "is_rust=true" >> $GITHUB_OUTPUT
+          fi
+
+      - name: Cargo Check
+        if: steps.check_rust.outputs.is_rust == 'true'
+        run: cargo check

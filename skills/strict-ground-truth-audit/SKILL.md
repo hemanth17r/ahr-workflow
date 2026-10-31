@@ -1,7 +1,7 @@
 ---
 name: strict-ground-truth-audit
 description: >-
-  Enforces rigorous, end-to-end empirical code audits across all layers (persistence, query syntax, data mappers, state lifecycle, business/date math, edge cases, type safety, and build integrity). Strictly prohibits making unverified assumptions, guessing feature status, or reporting success without empirical runtime/log proof. Trigger when asked to "check all wirings", "verify logics", "audit everything", "check if working properly", "is this actually working", "verify this", "double check", "ground truth check", or "strict audit".
+  Enforces rigorous, end-to-end empirical code audits across all layers (persistence, query syntax, data mappers, state lifecycle, business/date math, edge cases, type safety, and build integrity). Strictly bans frontend-only mock fixtures and mandates seeding the real database when test data is absent. Prohibits guessing feature status or reporting success without empirical runtime/log proof. Trigger when asked to "check all wirings", "verify logics", "audit everything", "check if working properly", "is this actually working", "verify this", "double check", "ground truth check", "strict audit", "seed data", "missing data", or "no mock data".
 ---
 
 # Strict Ground-Truth Audit & Zero-Guesswork Protocol
@@ -52,10 +52,32 @@ Audits must evaluate all 6 layers regardless of language, framework, or architec
 
 ---
 
-## Audit Output Structure
+## Audit Output Structure & Framing Rules
+
+- **Universal Screen-First Root Framing**: Even during deep backend, database, or API audits, every finding MUST first be introduced through the **physical persona screen journey** (who taps what, what fails on their screen) before explaining the underlying technical cause.
+- **Audit Defect vs. Enhancement Litmus Filter**: Strictly distinguish between **Core-Loop Functional/Security Blockers** (data loss, auth bypass, transaction crashes, unhandled errors) vs. **Post-MVP Enhancements / Missing CRUD conveniences** (e.g., custom avatar/logo uploaders, advanced filters, cosmetic settings). Forbid reporting non-essential conveniences or unused optional schema columns as defects; actively push back on them as scope creep.
 
 When reporting results, categorize findings into three standard sections:
 
 1. **Empirically Verified (Pass)**: Features, data flows, and logic confirmed line-by-line in code with specific file/line references.
-2. **Defects Discovered & Resolved (Fixed)**: Bugs, layout flaws, or logic errors identified and corrected during the audit.
+2. **Defects Discovered & Resolved (Fixed)**: Genuine core-loop blockers or security flaws identified and corrected during the audit.
 3. **Unverified Areas (Warnings)**: System components, third-party integrations, or production environments that require staging runtime verification.
+
+---
+
+## Production-Fidelity DB Seeding & Zero Frontend Mocking Protocol
+
+### 1. Absolute Ban on Frontend-Only Mock Fixtures
+- Strictly forbid creating in-memory dummy arrays, hardcoded mock objects, or component-level fallback state to simulate features, test screens, or demonstrate UI workflows.
+- All rendered cards, lists, counts, and statuses must originate directly from the database and flow through real server actions, API routes, or database RPCs.
+
+### 2. Proactive Missing-Data Workflow (Halt & Seed, Never Fake)
+When executing an audit, testing a newly entered area/postcode, or verifying a physical user flow where database rows are missing:
+1. **Never Intercept or Fake the UI**: Strictly forbid intercepting user inputs (e.g. search bars, form inputs) to show artificial mock cards or simulate success when the database query returns 0 rows.
+2. **Halt & Announce the Data Boundary**: State the direct factual gap to the operator: *"No real data exists in PostgreSQL for [area/postcode/workflow]. Halting to seed production-fidelity records."*
+3. **Execute Direct Database Seeding**: Inspect the target schema and generate authentic, production-structured seed rows directly in PostgreSQL/Supabase:
+   - Authentic geographic coordinates (lat/lng, postal districts).
+   - Valid UUID primary keys and existing foreign key relations.
+   - Realistic business attributes (names, prices, brands, pack sizes, stock counts, images).
+4. **End-to-End Verification**: Re-trigger the real database query/RPC and verify that the physical screen renders the persisted records end-to-end.
+

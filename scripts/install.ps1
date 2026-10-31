@@ -2,7 +2,7 @@
 .SYNOPSIS
     Installs the AHR Autonomous Workflow (Skills & Rules) for Google Antigravity on Windows.
 .DESCRIPTION
-    Backs up existing configurations, installs 30 domain skills into ~/.gemini/config/skills,
+    Backs up existing configurations, installs 34 domain skills into ~/.gemini/config/skills,
     and sets ~/.gemini/GEMINI.md as the Global Engineering & Operating Standard.
 #>
 
@@ -21,10 +21,11 @@ Write-Host "   Created by Akkala Hemanth Reddy (ahr)                  " -Foregro
 Write-Host "==========================================================" -ForegroundColor Cyan
 Write-Host ""
 
-$geminiHome = Join-Path $HOME ".gemini"
-$configDir  = Join-Path $geminiHome "config"
-$skillsDir  = Join-Path $configDir "skills"
-$rulesFile  = Join-Path $geminiHome "GEMINI.md"
+$geminiHome   = Join-Path $HOME ".gemini"
+$configDir    = Join-Path $geminiHome "config"
+$skillsDir    = Join-Path $configDir "skills"
+$templatesDir = Join-Path $configDir "templates"
+$rulesFile    = Join-Path $geminiHome "GEMINI.md"
 
 # 1. Ensure target directories exist
 if (-not (Test-Path $configDir)) {
@@ -33,6 +34,9 @@ if (-not (Test-Path $configDir)) {
 if (-not (Test-Path $skillsDir)) {
     New-Item -ItemType Directory -Path $skillsDir -Force | Out-Null
 }
+if (-not (Test-Path $templatesDir)) {
+    New-Item -ItemType Directory -Path $templatesDir -Force | Out-Null
+}
 
 # 2. Determine Source Location
 $scriptRoot = Split-Path -Parent $MyInvocation.MyCommand.Definition
@@ -40,8 +44,9 @@ $localRepoRoot = if ($scriptRoot) { Split-Path -Parent $scriptRoot } else { $nul
 
 $tempDir = $null
 if ($localRepoRoot -and (Test-Path (Join-Path $localRepoRoot "skills"))) {
-    $sourceSkills = Join-Path $localRepoRoot "skills"
-    $sourceRules  = Join-Path $localRepoRoot "rules\GEMINI.md"
+    $sourceSkills    = Join-Path $localRepoRoot "skills"
+    $sourceRules     = Join-Path $localRepoRoot "rules\GEMINI.md"
+    $sourceTemplates = Join-Path $localRepoRoot "templates"
     Write-Host "[+] Installing from local repository: $localRepoRoot" -ForegroundColor Green
 } else {
     Write-Host "[+] Downloading latest release from GitHub..." -ForegroundColor Cyan
@@ -55,8 +60,9 @@ if ($localRepoRoot -and (Test-Path (Join-Path $localRepoRoot "skills"))) {
     Expand-Archive -Path $zipFile -DestinationPath $tempDir -Force
     
     $extractedFolder = Join-Path $tempDir "ahr-workflow-main"
-    $sourceSkills = Join-Path $extractedFolder "skills"
-    $sourceRules  = Join-Path $extractedFolder "rules\GEMINI.md"
+    $sourceSkills    = Join-Path $extractedFolder "skills"
+    $sourceRules     = Join-Path $extractedFolder "rules\GEMINI.md"
+    $sourceTemplates = Join-Path $extractedFolder "templates"
 }
 
 # 3. Create Backup of Existing Setup if Present
@@ -68,6 +74,13 @@ if ((Test-Path $skillsDir) -and (Get-ChildItem -Path $skillsDir -ErrorAction Sil
     New-Item -ItemType Directory -Path (Join-Path $backupDir "skills") -Force | Out-Null
     Copy-Item -Path "$skillsDir\*" -Destination (Join-Path $backupDir "skills") -Recurse -Force
 }
+if ((Test-Path $templatesDir) -and (Get-ChildItem -Path $templatesDir -ErrorAction SilentlyContinue).Count -gt 0) {
+    if (-not (Test-Path $backupDir)) {
+        New-Item -ItemType Directory -Path $backupDir -Force | Out-Null
+    }
+    New-Item -ItemType Directory -Path (Join-Path $backupDir "templates") -Force | Out-Null
+    Copy-Item -Path "$templatesDir\*" -Destination (Join-Path $backupDir "templates") -Recurse -Force
+}
 if (Test-Path $rulesFile) {
     if (-not (Test-Path $backupDir)) {
         New-Item -ItemType Directory -Path $backupDir -Force | Out-Null
@@ -76,7 +89,7 @@ if (Test-Path $rulesFile) {
 }
 
 # 4. Copy Skills
-Write-Host "[*] Installing 32 production skills to: $skillsDir" -ForegroundColor Cyan
+Write-Host "[*] Installing 34 production skills to: $skillsDir" -ForegroundColor Cyan
 $skillFolders = Get-ChildItem -Path $sourceSkills -Directory
 foreach ($folder in $skillFolders) {
     $dest = Join-Path $skillsDir $folder.Name
@@ -89,12 +102,18 @@ if (Test-Path $sourceRules) {
     Copy-Item -Path $sourceRules -Destination $rulesFile -Force
 }
 
-# 6. Cleanup Temp Files
+# 6. Copy Templates
+if ($sourceTemplates -and (Test-Path $sourceTemplates)) {
+    Write-Host "[*] Installing workflow templates to: $templatesDir" -ForegroundColor Cyan
+    Copy-Item -Path "$sourceTemplates\*" -Destination $templatesDir -Recurse -Force
+}
+
+# 7. Cleanup Temp Files
 if ($tempDir -and (Test-Path $tempDir)) {
     Remove-Item -Path $tempDir -Recurse -Force -ErrorAction SilentlyContinue
 }
 
-# 7. Verification
+# 8. Verification
 $installedCount = (Get-ChildItem -Path $skillsDir -Directory).Count
 Write-Host ""
 Write-Host "==========================================================" -ForegroundColor Green
@@ -102,5 +121,5 @@ Write-Host "   SUCCESS: $installedCount Skills & Global Rules Installed!        
 Write-Host "==========================================================" -ForegroundColor Green
 Write-Host ""
 Write-Host "Next Step: Restart Google Antigravity or open a new session." -ForegroundColor White
-Write-Host "Your agent now operates with AHR's 32 production skills & rules." -ForegroundColor White
+Write-Host "Your agent now operates with AHR's 34 production skills & rules." -ForegroundColor White
 Write-Host ""

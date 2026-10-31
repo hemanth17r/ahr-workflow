@@ -115,12 +115,18 @@ Whenever designing a component or interaction pattern (search filter sheet, draw
 
 ---
 
-## 7. Progressive Disclosure Architecture
+## 7. Progressive Disclosure Architecture & The Multi-State Threshold Gate
 
 Keep the primary canvas clean and airy. If contextual help or secondary options are needed:
 * Use a subtle info trigger (`<Info size={14} />`) that reveals an optical popover or tooltip on demand.
 * Use expandable summary drawers (`<details>` / accordion) for multi-step or advanced settings.
 * Never dump secondary instruction manuals onto the primary screen canvas.
+
+### The 3-State Taxonomy Threshold Gate (Automated Legend Trigger)
+Whenever any screen, dashboard, or data table introduces **$\ge 3$ lifecycle states, pipeline stages, or operational acronyms** (e.g. `Active`, `Pending`, `Ready`, `Out for Delivery`, `Completed`, `Escrow`):
+* ❌ **Anti-Pattern 1 (Cognitive Guesswork)**: Exposing multiple distinct filter pills or status badges without defining what separates them (e.g. *What is the exact boundary between 'Active' vs 'Pending'?*).
+* ❌ **Anti-Pattern 2 (Static Canvas Bloat)**: Adding static explanation cards, text banners, or documentation blocks directly on the main operational view.
+* ✅ **The Mandatory Fix**: Automatically anchor an unobtrusive, light-transparent `(i)` circular icon button directly beside the primary section title or filter strip. Tapping it opens an on-demand, reversible Progressive Disclosure Modal/Sheet with a 1-sentence microcopy definition for every state.
 
 ---
 

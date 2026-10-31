@@ -47,7 +47,7 @@
      ```powershell
      irm https://raw.githubusercontent.com/hemanth17r/ahr-workflow/main/scripts/install.ps1 | iex
      ```
-3. Restart Antigravity. All 30 skills and master engineering rules (`GEMINI.md`) are now live.
+3. Restart Antigravity. All 34 skills and master engineering rules (`GEMINI.md`) are now live.
 
 ---
 

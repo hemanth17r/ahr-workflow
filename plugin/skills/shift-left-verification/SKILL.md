@@ -87,3 +87,14 @@ Before marking any milestone or task complete, verify:
 - [ ] **Zero Pixel Tests**: Are tests free from fragile CSS class or DOM geometry assertions?
 - [ ] **Edge Cases Covered**: Are boundary conditions (empty lists, null values, negative counts, zero thresholds) explicitly tested?
 - [ ] **Atomic Commit Ready**: Is the unit test staged and committed alongside the feature code?
+
+---
+
+## 6. Progressive Slice-by-Slice Wiring & Responsiveness Gate
+
+Never batch-dump 4-5 buttons, form fields, or interactive controls and test only after the entire feature is added. Every interactive control must be verified progressively as it is wired:
+
+1. **Zero Dummy / Placeholder Controls**: Every button, input, or trigger must execute its real downstream handler, state transition, or persistence contract immediately upon being placed. Leaving unverified or dummy actions is strictly considered a bug.
+2. **Tactile Responsiveness & Zero Shutter**: Controls must react instantly to touch/click (`active:scale-95`, loading spinners during async calls, zero UI freezing or event shutter).
+3. **Headless State & Persistence Verification**: Verify that input data actually saves (localStorage, database, or state store) slice-by-slice before proceeding to stack subsequent UI controls.
+4. **Interactive State Reversibility**: Verify toggle controls (open -> close -> open) and outside-click collision guards before declaring completion.

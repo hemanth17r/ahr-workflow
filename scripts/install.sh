@@ -10,6 +10,7 @@ REPO_URL="https://github.com/hemanth17r/ahr-workflow"
 GEMINI_HOME="$HOME/.gemini"
 CONFIG_DIR="$GEMINI_HOME/config"
 SKILLS_DIR="$CONFIG_DIR/skills"
+TEMPLATES_DIR="$CONFIG_DIR/templates"
 RULES_FILE="$GEMINI_HOME/GEMINI.md"
 
 echo ""
@@ -22,6 +23,7 @@ echo ""
 # 1. Ensure target directories exist
 mkdir -p "$CONFIG_DIR"
 mkdir -p "$SKILLS_DIR"
+mkdir -p "$TEMPLATES_DIR"
 
 # 2. Determine Source Location
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" 2>/dev/null && pwd || true)"
@@ -32,12 +34,14 @@ if [ -d "$LOCAL_REPO/skills" ]; then
     echo "[+] Installing from local repository: $LOCAL_REPO"
     SOURCE_SKILLS="$LOCAL_REPO/skills"
     SOURCE_RULES="$LOCAL_REPO/rules/GEMINI.md"
+    SOURCE_TEMPLATES="$LOCAL_REPO/templates"
 else
     echo "[+] Downloading latest release from GitHub..."
     TEMP_DIR=$(mktemp -d)
     curl -fsSL "$REPO_URL/archive/refs/heads/main.tar.gz" | tar -xz -C "$TEMP_DIR"
     SOURCE_SKILLS="$TEMP_DIR/ahr-workflow-main/skills"
     SOURCE_RULES="$TEMP_DIR/ahr-workflow-main/rules/GEMINI.md"
+    SOURCE_TEMPLATES="$TEMP_DIR/ahr-workflow-main/templates"
 fi
 
 # 3. Create Backup of Existing Setup if Present
@@ -50,13 +54,18 @@ if [ -d "$SKILLS_DIR" ] && [ "$(ls -A "$SKILLS_DIR" 2>/dev/null)" ]; then
     cp -r "$SKILLS_DIR"/* "$BACKUP_DIR/skills/"
 fi
 
+if [ -d "$TEMPLATES_DIR" ] && [ "$(ls -A "$TEMPLATES_DIR" 2>/dev/null)" ]; then
+    mkdir -p "$BACKUP_DIR/templates"
+    cp -r "$TEMPLATES_DIR"/* "$BACKUP_DIR/templates/"
+fi
+
 if [ -f "$RULES_FILE" ]; then
     mkdir -p "$BACKUP_DIR"
     cp "$RULES_FILE" "$BACKUP_DIR/GEMINI.md"
 fi
 
 # 4. Copy Skills
-echo "[*] Installing 32 production skills to: $SKILLS_DIR"
+echo "[*] Installing 34 production skills to: $SKILLS_DIR"
 cp -r "$SOURCE_SKILLS"/* "$SKILLS_DIR/"
 
 # 5. Copy Rules
@@ -65,12 +74,18 @@ if [ -f "$SOURCE_RULES" ]; then
     cp "$SOURCE_RULES" "$RULES_FILE"
 fi
 
-# 6. Cleanup Temp Files
+# 6. Copy Templates
+if [ -d "$SOURCE_TEMPLATES" ]; then
+    echo "[*] Installing workflow templates to: $TEMPLATES_DIR"
+    cp -r "$SOURCE_TEMPLATES"/* "$TEMPLATES_DIR/"
+fi
+
+# 7. Cleanup Temp Files
 if [ -n "$TEMP_DIR" ] && [ -d "$TEMP_DIR" ]; then
     rm -rf "$TEMP_DIR"
 fi
 
-# 7. Verification
+# 8. Verification
 INSTALLED_COUNT=$(ls -1d "$SKILLS_DIR"/*/ 2>/dev/null | wc -l)
 echo ""
 echo "=========================================================="
@@ -78,5 +93,5 @@ echo "   SUCCESS: $INSTALLED_COUNT Skills & Global Rules Installed!           "
 echo "=========================================================="
 echo ""
 echo "Next Step: Restart Google Antigravity or open a new session."
-echo "Your agent now operates with AHR's 32 production skills & rules."
+echo "Your agent now operates with AHR's 34 production skills & rules."
 echo ""
