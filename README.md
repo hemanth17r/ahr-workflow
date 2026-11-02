@@ -6,9 +6,9 @@
 
 Created & maintained by **Akkala Hemanth Reddy (`ahr`)**  
 
-[![YouTube](https://img.shields.io/badge/YouTube-%40hemanth17a-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@hemanth17a)
-[![X (Twitter)](https://img.shields.io/badge/X-%40hemanth17rr-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/hemanth17rr)
 [![Instagram](https://img.shields.io/badge/Instagram-%40hemanth17a-E4405F?style=flat-square&logo=instagram&logoColor=white)](https://www.instagram.com/hemanth17a/)
+[![X (Twitter)](https://img.shields.io/badge/X-%40hemanth17rr-000000?style=flat-square&logo=x&logoColor=white)](https://x.com/hemanth17rr)
+[![YouTube](https://img.shields.io/badge/YouTube-%40hemanth17a-FF0000?style=flat-square&logo=youtube&logoColor=white)](https://www.youtube.com/@hemanth17a)
 [![GitHub](https://img.shields.io/badge/GitHub-%40hemanth17r-181717?style=flat-square&logo=github&logoColor=white)](https://github.com/hemanth17r)
 [![Email](https://img.shields.io/badge/Email-hemanth17r%40gmail.com-blue?style=flat-square&logo=gmail&logoColor=white)](mailto:hemanth17r@gmail.com)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg?style=flat-square)](LICENSE)
@@ -17,9 +17,9 @@ Created & maintained by **Akkala Hemanth Reddy (`ahr`)**
 
 ---
 
-## 📺 Complete Walkthrough Video
-> **YouTube Video Guide**: Subscribe on [**YouTube (@hemanth17a)**](https://www.youtube.com/@hemanth17a) for the complete video walkthrough.  
-> The video covers installation, live debugging, and how Antigravity handles the 95% automated workflow while you only handle the 5% human sign-ins.
+## 📸 App Dev Breakdown & Live Demos
+> **Primary Spotlight: [@hemanth17a on Instagram](https://www.instagram.com/hemanth17a/)**  
+> Since Instagram supports long-form deep-dives, short-form reels, and visual carousels in one unified hub, everything is consolidated there. Follow **[Instagram (@hemanth17a)](https://www.instagram.com/hemanth17a/)** as the primary spotlight to see live app development, production teardowns, screen architecture, and real-world workflows built with this system.
 
 ---
 
@@ -118,13 +118,13 @@ Quick Highlights:
 
 Follow for upcoming workflow releases, agent breakdowns, and project drops:
 
-| Platform | Handle | Direct Link |
-| :--- | :--- | :--- |
-| **YouTube** | `@hemanth17a` | [youtube.com/@hemanth17a](https://www.youtube.com/@hemanth17a) |
-| **X (Twitter)** | `@hemanth17rr` | [x.com/hemanth17rr](https://x.com/hemanth17rr) |
-| **Instagram** | `@hemanth17a` | [instagram.com/hemanth17a](https://www.instagram.com/hemanth17a/) |
-| **GitHub** | `@hemanth17r` | [github.com/hemanth17r](https://github.com/hemanth17r) |
-| **Email** | `hemanth17r@gmail.com` | [hemanth17r@gmail.com](mailto:hemanth17r@gmail.com) |
+| Platform | Handle | Direct Link | Focus |
+| :--- | :--- | :--- | :--- |
+| **Instagram** | `@hemanth17a` | [instagram.com/hemanth17a](https://www.instagram.com/hemanth17a/) | **Main Spotlight** (App dev breakdowns, long & short-form demos, live builds) |
+| **X (Twitter)** | `@hemanth17rr` | [x.com/hemanth17rr](https://x.com/hemanth17rr) | Architecture thoughts, release updates & quick notes |
+| **YouTube** | `@hemanth17a` | [youtube.com/@hemanth17a](https://www.youtube.com/@hemanth17a) | Video archives |
+| **GitHub** | `@hemanth17r` | [github.com/hemanth17r](https://github.com/hemanth17r) | Open source repos & workflow updates |
+| **Email** | `hemanth17r@gmail.com` | [hemanth17r@gmail.com](mailto:hemanth17r@gmail.com) | Direct inquiries & collaboration |
 
 ---
 

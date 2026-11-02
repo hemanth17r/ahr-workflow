@@ -2,7 +2,7 @@
 ### Zero-to-Production: Browser DevTools MCP + GitHub CLI + Supabase + Vercel
 
 > **Author**: Akkala Hemanth Reddy (`ahr`)  
-> **Contact**: `hemanth17r@gmail.com` | [YouTube (@hemanth17a)](https://www.youtube.com/@hemanth17a) | [X (@hemanth17rr)](https://x.com/hemanth17rr)  
+> **Contact**: [Instagram (@hemanth17a)](https://www.instagram.com/hemanth17a/) | [X (@hemanth17rr)](https://x.com/hemanth17rr) | [YouTube (@hemanth17a)](https://www.youtube.com/@hemanth17a) | `hemanth17r@gmail.com`  
 > **Philosophy**: You should **never** follow a 30-step manual dashboard tutorial. Antigravity includes Chrome DevTools MCP by default. The human only performs the physical account logins (Google/GitHub SSO & 2FA); the agent navigates the screens, clicks the buttons, links repos, and extracts keys.
 
 ---
